@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Bootstrap Lab</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="lab6.css">
+</head>
+
+<body style="background-color: rgb(88, 88, 173)">
+    <div class="container-fluid">
+        <div class="row text-center">
+
+            <div class="col-sm-5 col-md-5 rounded padded">
+                <div class="row">
+
+                    <div class="col-sm-12 col-md-12 ">
+                        <h3>MEMBER LOGIN</h3>
+                        <form class="form-horizontal" action="/action_page.php">
+
+                            <input type="text" placeholder="Username" class="form-control">
+                            <input type="password" placeholder="Password" class="form-control">
+                            <br>
+                            <Label><input type="checkbox"> Remember me</Label>
+                            <Label><input type="checkbox"> Forgot Password?</Label>
+                            <br>
+                            <input type="button" name="LOGIN" value="LOGIN" class="btn btn-primary">
+                            <hr>
+                            <Label>You are not a member?</Label>
+                            <br>
+                            <input type="button" name="REGISTER NOW" value="REGISTER NOW" class="btn btn-primary">
+
+                        </form>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="col-sm-2 col-md-2"></div>
+
+            <div class="col-sm-5 col-md-5 rounded padded">
+
+                <h3>REGISTRATION</h3>
+                <form class="form-horizontal" action="/action_page.php">
+
+                    <input type="text" placeholder="First Name" class="form-control">
+                    <input type="text" placeholder="Last Name" class="form-control">
+                    <input type="text" placeholder="User name" class="form-control">
+                    <input type="email" placeholder="Email Address" class="form-control">
+                    <input type="password" placeholder="Password" class="form-control">
+                    <input type="password" placeholder="Confirm Password" class="form-control">
+                    <Label><input type="checkbox"> Subscribe to newsletter</Label>
+                    <br>
+                    <input type="button" name="REGISTER" value="REGISTER" class="btn btn-primary">
+                    <input type="button" name="CANCEL" value="CANCEL" class="btn btn-primary">
+
+
+                </form>
+
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

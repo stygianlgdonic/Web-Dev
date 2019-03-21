@@ -1,0 +1,69 @@
+div {
+	width: auto;
+	border: 2px solid black;
+	margin-left: 25px;
+	margin-right: 25px;
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+
+hr {
+	border-top: dashed 2px;
+}
+
+#table1 {
+	width: 100%;
+}
+
+#table2 {
+	width: 100%;
+}
+
+#table3 {
+	width: 100%;
+	border-collapse: collapse;
+}
+
+#table3 th {
+	border: 1px solid black;
+}
+
+#table3 td {
+	border: 1px solid black;
+	height: 20px;
+}
+
+#mark1 {
+	background-color: black;
+}
+
+#photo {
+	width: 100px;
+	height: 100px;
+	border: 1px solid black;
+}
+
+#div2 {
+	padding: 10px;
+}
+
+.line {
+	width: 65%;
+	border: none;
+	border-bottom: 2px solid black;
+}
+
+#cnic .nicData {
+	border: 1px solid black;
+	width: 15px;
+}
+
+#email {
+	width: 100%;
+}
+
+.email_line {
+	width: 50%;
+	border: none;
+	border-bottom: 2px solid black;
+}

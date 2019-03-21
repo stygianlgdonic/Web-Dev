@@ -1,0 +1,29 @@
+.container {
+    width: 80%;
+}
+
+section, aside {
+    margin: 1%;
+}
+
+section {
+    float: left;
+    background-color: darkgray;
+    width: 63%;
+    padding: 1%;
+}
+
+aside {
+    float: right;
+    width: 33%;
+    background-color: lightgreen;
+}
+
+aside a {
+    color: red;
+}
+
+.jumbotron {
+    color: brown;
+    background-color: blanchedalmond;
+}

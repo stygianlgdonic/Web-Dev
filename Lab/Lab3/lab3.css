@@ -1,0 +1,27 @@
+p {
+	font-family: cursive;
+}
+
+section + p {
+	color: red;
+}
+
+p + section {
+	color: green;
+}
+
+section > a {
+	background-color: yellow;
+}
+
+#final a {
+	background-color: lime;
+}
+
+#intro ~ h1 {
+	background-color: lime; 
+}
+
+h1 ~ section {
+	background-color: green;
+}

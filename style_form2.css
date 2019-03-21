@@ -1,0 +1,24 @@
+.border {
+    border: 1px solid black;
+    margin: 10px;
+    padding: 20px;
+}
+
+.photo {
+	width: 100px;
+	height: 100px;
+	border: 1px solid black;
+}
+
+.dashed {
+    border-top: 2px dashed black;
+}
+
+.tableinput {
+    border: none;
+    width: 100%;
+}
+
+.tableinput:focus {
+    outline: none;
+}
