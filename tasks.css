@@ -1,0 +1,21 @@
+* {
+    color: white;
+    background-color: #222629;
+}
+
+.padded {
+    padding: 10%;
+}
+
+.greenlink {
+    color: #86c232;
+}
+
+.greenlink:hover {
+    color: #61892f;
+    text-decoration: none;
+}
+
+h1 {
+    color: #6b6e70;
+}
