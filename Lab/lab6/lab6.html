@@ -19,15 +19,15 @@
 
                     <div class="col-sm-12 col-md-12 ">
                         <h3>MEMBER LOGIN</h3>
-                        <form class="form-horizontal" action="/action_page.php">
+                        <form class="form-horizontal" action="showmember.php" method="GET" autocomplete="off">
 
-                            <input type="text" placeholder="Username" class="form-control">
-                            <input type="password" placeholder="Password" class="form-control">
+                            <input type="text" name="username_login" placeholder="Username" class="form-control">
+                            <input type="password" name="password_login" placeholder="Password" class="form-control">
                             <br>
-                            <Label><input type="checkbox"> Remember me</Label>
-                            <Label><input type="checkbox"> Forgot Password?</Label>
+                            <Label><input type="checkbox" name="rememberme" checked="checked"> Remember me</Label>&nbsp;&nbsp;&nbsp;&nbsp;
+                            <Label><a href="lab6.html">Forgot Password?</a></Label>
                             <br>
-                            <input type="button" name="LOGIN" value="LOGIN" class="btn btn-primary">
+                            <input type="submit" name="login" value="LOGIN" class="btn btn-primary">
                             <hr>
                             <Label>You are not a member?</Label>
                             <br>
@@ -45,18 +45,18 @@
             <div class="col-sm-5 col-md-5 rounded padded">
 
                 <h3>REGISTRATION</h3>
-                <form class="form-horizontal" action="/action_page.php">
+                <form class="form-horizontal" action="showmember.php" method="GET" autocomplete="off">
 
-                    <input type="text" placeholder="First Name" class="form-control">
-                    <input type="text" placeholder="Last Name" class="form-control">
-                    <input type="text" placeholder="User name" class="form-control">
-                    <input type="email" placeholder="Email Address" class="form-control">
-                    <input type="password" placeholder="Password" class="form-control">
-                    <input type="password" placeholder="Confirm Password" class="form-control">
-                    <Label><input type="checkbox"> Subscribe to newsletter</Label>
+                    <input type="text" name="firstname" placeholder="First Name" class="form-control">
+                    <input type="text" name="lastname" placeholder="Last Name" class="form-control">
+                    <input type="text" name="username_r" placeholder="User name" class="form-control">
+                    <input type="email" name="email_r" placeholder="Email Address" class="form-control">
+                    <input type="password" name="password_r" placeholder="Password" class="form-control">
+                    <input type="password" name="password_r" placeholder="Confirm Password" class="form-control">
+                    <Label><input type="checkbox" name="subscribe" checked="checked"> Subscribe to newsletter</Label>
                     <br>
-                    <input type="button" name="REGISTER" value="REGISTER" class="btn btn-primary">
-                    <input type="button" name="CANCEL" value="CANCEL" class="btn btn-primary">
+                    <input type="submit" name="register" value="REGISTER" class="btn btn-primary">
+                    <input type="reset" name="cancel" value="CANCEL" class="btn btn-primary">
 
 
                 </form>

@@ -22,3 +22,12 @@ h3, label {
 hr {
     border-top: 1px solid whitesmoke;
 }
+
+a {
+    color: white;
+}
+
+a:hover {
+    text-decoration: none;
+    color: rgb(132, 253, 147);
+}
