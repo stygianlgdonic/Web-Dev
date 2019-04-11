@@ -22,3 +22,8 @@
 .tableinput:focus {
     outline: none;
 }
+
+.form-control, .control-label {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}

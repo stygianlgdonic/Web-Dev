@@ -16,11 +16,11 @@
         <section class="border">
 
             <div class="row">
-                <div class="col-sm-2">
+                <div class="col-md-2">
                     <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/COMSATS_new_logo.jpg/220px-COMSATS_new_logo.jpg"
                         width="100px" height="100px">
                 </div>
-                <div class="col-sm-8">
+                <div class="col-md-8">
                     <div class="row">
                         <h4 class="text-center">Non-Faculty Job Aplication Form</h4>
                     </div>
@@ -28,7 +28,7 @@
                         <h4 class="text-center">COMSATS Institute of Information and Technology.</h4>
                     </div>
                 </div>
-                <div class="col-sm-2">
+                <div class="col-md-2">
                     <div class="text-center photo">
                         <h6>affix a recent photograph of 3cm x 5cm</h6>
                     </div>
@@ -39,277 +39,214 @@
 
         <section class="border">
 
-            <form class="form-horizontal" action="/action_page.php">
+            <form class="form-horizontal" action="form2.php" method="GET" autocomplete="off">
 
                 <div class="form-group">
 
-                    <div class="col-sm-3">
-                        <div class="row"><label class="control-label">Post applied for:</label></div>
-                        <div class="row"><i class="control-label">(mention only one position)</i></div>
-                    </div>
-                    <div class="col-sm-9">
-                        <input type="text" class="form-control">
-                    </div>
-
-                </div>
-
-                <div class="form-group">
-
-                    <div class="col-sm-3">
-                        <div class="row"><label class="control-label">Department:</label></div>
-                        <div class="row"><i class="control-label">(mention department if required)</i></div>
-                    </div>
-                    <div class="col-sm-9">
-                        <input type="text" class="form-control">
-                    </div>
-
-                </div>
-
-                <div class="form-group">
-
-                    <div class="col-sm-3">
-                        <div class="row"><label class="control-label">Campus:</label></div>
-                        <div class="row"><i class="control-label">(please tick only one)</i></div>
-                    </div>
-                    <div class="col-sm-9">
-                        <div class="col-sm-6">
-                            Lahore <input type="checkbox" name="lahore">
+                    <div class="row">
+                        <div class="col-md-3">
+                            <label class="control-label">Post applied for:</label>
                         </div>
-                        <div class="col-sm-6">
-                            Attock <input type="checkbox" name="attock">
+                        <div class="col-md-9">
+                            <input type="text" class="form-control" name="postname">
                         </div>
                     </div>
 
-                </div>
+                    <div class="row">
+                        <div class="col-md-3">
+                            <label class="control-label">Department:</label>
+                        </div>
+                        <div class="col-md-9">
+                            <input type="text" class="form-control" name="dept">
+                        </div>
 
-                <div class="form-group">
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-3">
+                            <label class="control-label">Campus:</label>
+                        </div>
+                        <div class="col-md-9">
+                            <label class="radio-inline">
+                                <input type="radio" name="campus" value="Lahore" checked>&nbsp;Lahore
+                            </label>
+                            <label class="radio-inline">
+                                <input type="radio" name="campus" value="Attock">&nbsp;Attock
+                            </label>
+                        </div>
+                    </div>
+
                     <hr class="dashed">
-                </div>
 
-                <div class="form-group">
-
-                    <div class="col-sm-3">
-                        <div class="row"><label class="control-label">Name in full:</label></div>
-                        <div class="row"><i class="control-label">(use CAPITAL LETTERS)</i></div>
-                    </div>
-                    <div class="col-sm-9">
-                        <input type="text" class="form-control">
-                    </div>
-
-                </div>
-
-                <div class="form-group">
-
-                    <div class="col-sm-3">
-                        <div class="row"><label class="control-label">Father Name:</label></div>
-                        <div class="row"><i class="control-label">(use CAPITAL LETTERS)</i></div>
-                    </div>
-                    <div class="col-sm-9">
-                        <input type="text" class="form-control">
-                    </div>
-
-                </div>
-
-                <div class="form-group">
-
-                    <div class="col-sm-7">
-                        <div class="col-sm-2">
-                            <label class="control-label">N.I.C.#</label>
+                    <div class="row">
+                        <div class="col-md-3">
+                            <label class="control-label">Full Name:</label>
                         </div>
-                        <div class="col-sm-10">
-                            <input type="text" class="form-control" placeholder="xxxxx-xxxxxxx-x">
+                        <div class="col-md-9">
+                            <input type="text" class="form-control" name="fullname">
                         </div>
                     </div>
 
-                    <div class="col-sm-5">
-                        <div class="col-sm-4">
-                            <label class="control-label">Date of Birth:</label>
+                    <div class="row">
+                        <div class="col-md-3">
+                            <label class="control-label">Father Name:</label>
                         </div>
-                        <div class="col-sm-8">
-                            <input type="text" class="form-control" placeholder="DD/MM/YY">
-                        </div>
-                    </div>
-
-                </div>
-
-                <div class="form-group">
-
-                    <div class="col-sm-7">
-                        <div class="col-sm-2">
-                            <label class="control-label">E-mail:</label>
-                        </div>
-                        <div class="col-sm-10">
-                            <input type="text" class="form-control" placeholder="xyz@example.com">
+                        <div class="col-md-9">
+                            <input type="text" class="form-control" name="fathername">
                         </div>
                     </div>
 
-                    <div class="col-sm-5">
-                        <div class="col-sm-4">
-                            <label class="control-label">Gender:</label>
-                        </div>
-                        <div class="col-sm-8">
-                            <div class="col-sm-6">
-                                Male <input type="checkbox" name="male">
+
+                    <div class="row">
+                        <div class="col-md-7">
+                            <div class="col-md-2">
+                                <label class="control-label">N.I.C.#</label>
                             </div>
-                            <div class="col-sm-6">
-                                Female <input type="checkbox" name="female">
+                            <div class="col-md-10">
+                                <input type="number" class="form-control" placeholder="CNIC without dashes" name="cnic">
+                            </div>
+                        </div>
+
+                        <div class="col-md-5">
+                            <div class="col-md-4">
+                                <label class="control-label">Date of Birth:</label>
+                            </div>
+                            <div class="col-md-8">
+                                <input type="date" class="form-control" name="dob">
                             </div>
                         </div>
                     </div>
 
-                </div>
+                    <div class="row">
+                        <div class="col-md-7">
+                            <div class="col-md-2">
+                                <label class="control-label">E-mail:</label>
+                            </div>
+                            <div class="col-md-10">
+                                <input type="email" name="email" class="form-control" placeholder="Enter your Email">
+                            </div>
+                        </div>
 
-                <div class="form-group">
-
-                    <div class="col-sm-3">
-                        <label class="control-label">Correspondence postal address:</label>
+                        <div class="col-md-5">
+                            <div class="col-md-3">
+                                <label class="control-label">Gender:</label>
+                            </div>
+                            <div class="col-md-9">
+                                <label class="radio-inline">
+                                    <input type="radio" name="gender" value="Male" checked>&nbsp;Male
+                                </label>
+                                <label class="radio-inline">
+                                    <input type="radio" name="gender" value="Female">&nbsp;Female
+                                </label>
+                            </div>
+                        </div>
                     </div>
-                    <div class="col-sm-9">
-                        <input type="text" class="form-control">
+
+                    <br>
+
+                    <div class="row">
+                        <div class="col-md-3">
+                            <label class="control-label">Correspondence postal address:</label>
+                        </div>
+                        <div class="col-md-9">
+                            <input type="text" class="form-control" name="postaladd">
+                        </div>
                     </div>
 
-                </div>
-
-                <div class="form-group">
-
-                    <div class="col-sm-3">
-                        <label class="control-label">City:</label>
-                    </div>
-                    <div class="col-sm-9">
-                        <input type="text" class="form-control">
+                    <div class="row">
+                        <div class="col-md-3">
+                            <label class="control-label">City:</label>
+                        </div>
+                        <div class="col-md-9">
+                            <input type="text" class="form-control" name="city">
+                        </div>
                     </div>
 
-                </div>
-
-                <div class="form-group">
-
-                    <div class="col-sm-2">
+                    <div class="row">
                         <label class="control-label">Telephone No.</label>
                     </div>
-                    <div class="col-sm-10">
-
-                        <div class="col-sm-4">
-                            <div class="col-sm-2">
-                                <label class="control-label">(Off)</label>
-                            </div>
-                            <div class="col-sm-10">
-                                <input type="text" class="form-control">
-                            </div>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <input type="text" class="form-control" name="officenum" placeholder="Office">
                         </div>
-
-                        <div class="col-sm-4">
-                            <div class="col-sm-2">
-                                <label class="control-label">(Res)</label>
-                            </div>
-                            <div class="col-sm-10">
-                                <input type="text" class="form-control">
-                            </div>
+                        <div class="col-md-4">
+                            <input type="text" class="form-control" name="resnum" placeholder="Residence">
                         </div>
-
-                        <div class="col-sm-4">
-                            <div class="col-sm-2">
-                                <label class="control-label">(Mob)</label>
-                            </div>
-                            <div class="col-sm-10">
-                                <input type="text" class="form-control">
-                            </div>
+                        <div class="col-md-4">
+                            <input type="text" class="form-control" name="mobnum" placeholder="mobile">
                         </div>
-
                     </div>
 
-                </div>
-
-                <div class="form-group">
                     <hr class="dashed">
-                </div>
 
-                <div class="form-group">
-
-                    <div class="col-sm-12">
-                        <label class="control-label">Academic Record</label>
-                        <i>(Please start from the highest qualification and go down in decending order)</i>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <label class="control-label">Academic Record</label>
+                            <i>(Please start from the highest qualification and go down in decending order)</i>
+                        </div>
                     </div>
 
-                </div>
+                    <div class="row">
 
-                <div class="form-group">
+                        <div class="col-md-12">
+                            <table class="table table-bordered">
+                                <thead>
+                                    <tr>
+                                        <th class="text-center">Degree held</th>
+                                        <th class="text-center">Year of award</th>
+                                        <th class="text-center">Field</th>
+                                        <th class="text-center">Board/University</th>
+                                        <th class="text-center">Grade/Div</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><input type="text" class="tableinput"></td>
+                                        <td><input type="text" class="tableinput"></td>
+                                        <td><input type="text" class="tableinput"></td>
+                                        <td><input type="text" class="tableinput"></td>
+                                        <td><input type="text" class="tableinput"></td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="text" class="tableinput"></td>
+                                        <td><input type="text" class="tableinput"></td>
+                                        <td><input type="text" class="tableinput"></td>
+                                        <td><input type="text" class="tableinput"></td>
+                                        <td><input type="text" class="tableinput"></td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="text" class="tableinput"></td>
+                                        <td><input type="text" class="tableinput"></td>
+                                        <td><input type="text" class="tableinput"></td>
+                                        <td><input type="text" class="tableinput"></td>
+                                        <td><input type="text" class="tableinput"></td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="text" class="tableinput"></td>
+                                        <td><input type="text" class="tableinput"></td>
+                                        <td><input type="text" class="tableinput"></td>
+                                        <td><input type="text" class="tableinput"></td>
+                                        <td><input type="text" class="tableinput"></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
 
-                    <div class="col-sm-12">
-                        <table class="table table-bordered">
-                            <thead>
-                                <tr>
-                                    <th class="text-center">Degree held</th>
-                                    <th class="text-center">Year of award</th>
-                                    <th class="text-center">Field</th>
-                                    <th class="text-center">Board/University</th>
-                                    <th class="text-center">Grade/Div</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td><input type="text" class="tableinput"></td>
-                                    <td><input type="text" class="tableinput"></td>
-                                    <td><input type="text" class="tableinput"></td>
-                                    <td><input type="text" class="tableinput"></td>
-                                    <td><input type="text" class="tableinput"></td>
-                                </tr>
-                                <tr>
-                                    <td><input type="text" class="tableinput"></td>
-                                    <td><input type="text" class="tableinput"></td>
-                                    <td><input type="text" class="tableinput"></td>
-                                    <td><input type="text" class="tableinput"></td>
-                                    <td><input type="text" class="tableinput"></td>
-                                </tr>
-                                <tr>
-                                    <td><input type="text" class="tableinput"></td>
-                                    <td><input type="text" class="tableinput"></td>
-                                    <td><input type="text" class="tableinput"></td>
-                                    <td><input type="text" class="tableinput"></td>
-                                    <td><input type="text" class="tableinput"></td>
-                                </tr>
-                                <tr>
-                                    <td><input type="text" class="tableinput"></td>
-                                    <td><input type="text" class="tableinput"></td>
-                                    <td><input type="text" class="tableinput"></td>
-                                    <td><input type="text" class="tableinput"></td>
-                                    <td><input type="text" class="tableinput"></td>
-                                </tr>
-                                <tr>
-                                    <td><input type="text" class="tableinput"></td>
-                                    <td><input type="text" class="tableinput"></td>
-                                    <td><input type="text" class="tableinput"></td>
-                                    <td><input type="text" class="tableinput"></td>
-                                    <td><input type="text" class="tableinput"></td>
-                                </tr>
-                                <tr>
-                                    <td><input type="text" class="tableinput"></td>
-                                    <td><input type="text" class="tableinput"></td>
-                                    <td><input type="text" class="tableinput"></td>
-                                    <td><input type="text" class="tableinput"></td>
-                                    <td><input type="text" class="tableinput"></td>
-                                </tr>
-                            </tbody>
-                        </table>
                     </div>
 
-                </div>
-
-                <div class="form-group">
                     <hr class="dashed">
-                </div>
 
-                <div class="form-group">
-
-                    <div class="col-sm-12">
-                        <label class="control-label">Employement History</label>
-                        <i>(Please start from your most recent job and go down in decending order)</i>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <label class="control-label">Employement History</label>
+                            <i>(Please start from your most recent job and go down in decending order)</i>
+                        </div>
                     </div>
 
                 </div>
 
-                <div class="form-group">
-
-                    <div class="col-sm-12">
+                <div class="row">
+                    <div class="col-md-12">
                         <table class="table table-bordered">
                             <thead>
                                 <tr>
@@ -359,23 +296,24 @@
                             </tbody>
                         </table>
                     </div>
-
                 </div>
-
-                <div class="form-group">
-
-                    <div class="col-sm-6">
+                <div class="row">
+                    <div class="col-md-5">
                         <label class="control-label">Dated:</label>
                     </div>
-                    <div class="col-sm-6">
+                    <div class="col-md-5">
                         <label class="control-label">Sigature:</label>
                     </div>
-
+                    <div class="col-md-2">
+                        <input type="submit" name="submit" class="btn btn-primary">
+                    </div>
                 </div>
 
             </form>
 
         </section>
+
+    </div>
 
 </body>
 
