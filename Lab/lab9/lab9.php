@@ -24,7 +24,7 @@ if ($pic_size < 10000000) {
     move_uploaded_file($pic_tmpname, $destination);
 
     $query = "INSERT INTO `demodb`.`users` (`user_name`, `user_Email`,
-     `user_CNIC`, `user_Comments`, `user_Telephone`, `user_Picture`) VALUES (
+     `user_CNIC`, `user_Telephone`, `user_Comments`, `user_Picture`) VALUES (
      '$name', '$email', '$cnic', '$comment', '$tel', '$destination')";
     $result = mysqli_query($connection, $query);
 
