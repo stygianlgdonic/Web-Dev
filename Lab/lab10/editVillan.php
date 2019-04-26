@@ -4,7 +4,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="lab10.css">
-    <title>Edit Hero</title>
+    <title>Edit Villan</title>
 </head>
 
 
@@ -16,13 +16,13 @@ $id = $_REQUEST['id'];
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $real = $_POST["real"];
-    $hero = $_POST["hero"];
+    $villan = $_POST["villan"];
     $power = $_POST["power"];
 
-    $sqlAddHero = "UPDATE `marvel`.`heros` SET `real` = '" . $real . "' , `hero` = '" . $hero . "', `power` = '" . $power . "' WHERE id=" . $id;
+    $sqlAddVillan = "UPDATE `marvel`.`villans` SET `real` = '" . $real . "' , `villan` = '" . $villan . "', `power` = '" . $power . "' WHERE id=" . $id;
 
-    if (mysqli_query($connection, $sqlAddHero)) {
-        echo "Hero Edited!";
+    if (mysqli_query($connection, $sqlAddVillan)) {
+        echo "Villan Edited!";
         echo "<script>location.href='index.php';</script>";
         // header("refresh:2; url=index.php");
     } else {
@@ -30,7 +30,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 }
 
-$query = "SELECT * FROM `marvel`.`heros` WHERE id=" . "$id";
+$query = "SELECT * FROM `marvel`.`villans` WHERE id=" . "$id";
 $result = mysqli_query($connection, $query);
 $row = mysqli_fetch_assoc($result);
 
@@ -48,13 +48,13 @@ $row = mysqli_fetch_assoc($result);
                 $yourName = "null";
             }
             ?>
-            <h1>Edit Hero</h1>
-            <form action="editHero.php" method="POST">
+            <h1>Edit Villan</h1>
+            <form action="editVillan.php" method="POST">
 
                 <input type="text" class="form-control" placeholder="Your Name" name="name" value="<?php echo $yourName; ?>">
                 <hr>
                 <input type="text" name="real" placeholder="Real Name" class="form-control" value="<?php echo $row['real']; ?>"><br>
-                <input type="text" name="hero" placeholder="Code Name" class="form-control" value="<?php echo $row['hero']; ?>"><br>
+                <input type="text" name="villan" placeholder="Code Name" class="form-control" value="<?php echo $row['villan']; ?>"><br>
                 <input type="text" name="power" placeholder="Power" class="form-control" value="<?php echo $row['power']; ?>"><br>
                 <input type="hidden" name="id" value="<?php echo $id; ?>">
                 <input type="submit" name="submit" class="btn btn-info float-left">

@@ -1,3 +1,7 @@
+<?php
+session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -10,7 +14,7 @@
     <title>result</title>
 </head>
 
-<body>
+<body class="padded">
     <?php
     include_once('dbconnect.php');
 
@@ -41,6 +45,7 @@
                             <th>Code Name</th>
                             <th>Super Power</th>
                             <th>Action</th>
+                            <th>Last Edited by</th>
                         </tr>
 
                         <?php
@@ -62,6 +67,15 @@
                                 <td>
                                     <?php echo '<a class="greenlink" href="deleteHero.php?id=' . $row['id'] . '">Delete</a> 
                                     - <a class="greenlink" href="editHero.php?id=' . $row['id'] . '">Edit</a>'; ?>
+                                </td>
+                                <td>
+                                    <?php
+                                    if (isset($_SESSION["$row[real]"])) {
+                                        echo $_SESSION["$row[real]"];
+                                    } else {
+                                        echo "None";
+                                    }
+                                    ?>
                                 </td>
                             </tr>
                         <?php
@@ -106,6 +120,7 @@
                             <th>Code Name</th>
                             <th>Super Power</th>
                             <th>Action</th>
+                            <th>Last Edited by</th>
                         </tr>
 
                         <?php
@@ -128,6 +143,15 @@
                                     <?php echo '<a class="greenlink" href="deleteVillan.php?id=' . $row['id'] . '">Delete</a>
                                      - <a class="greenlink" href="editVillan.php?id=' . $row['id'] . '">Edit</a>'; ?>
                                 </td>
+                                <td>
+                                    <?php
+                                    if (isset($_SESSION["$row[real]"])) {
+                                        echo $_SESSION["$row[real]"];
+                                    } else {
+                                        echo "None";
+                                    }
+                                    ?>
+                                </td>
                             </tr>
                         <?php
                     }
@@ -139,7 +163,7 @@
             <div class="col-md-2"></div>
         </div>
 
-        <div class="row text-center">
+        <div class="row text-center padded">
             <div class="col-md-2"></div>
             <div class="col-md-8">
                 <a href="addHero.php" class="btn btn-info">Add New Hero</a>
