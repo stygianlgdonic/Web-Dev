@@ -80,32 +80,99 @@
     <hr>
     <div class="container-fluid">
         <div class="row padded">
-            <div class="col-md-3"></div>
-            <div class="col-md-6 grey rounded padded">
+            <div class="col-md-1"></div>
+            <div class="col-md-10 grey rounded padded">
                 <h2>Course Form</h2>
-                <form>
-                    <div class="form-group">
-                        <label for="name">Name</label>
-                        <input type="text" class="form-control" id="name1" placeholder="Enter Your Name">
+                <div class="panel panel-default">
+                    <div class="panel-body">
+                        <label>Your Name</label><br>
+                        <input type="text" name="name">
+                        <br><br>
+                        <label>Registration Number</label><br>
+                        <input type="text" name="regNo">
+                        <br><br>
+                        <label>Semester</label><br>
+                        <input type="text" name="semester">
+                        <br><br>
                     </div>
-                    <div class="form-group">
-                        <label for="regNo">Registration Number</label>
-                        <input type="text" class="form-control" id="regNo1"
-                            placeholder="Enter Your Registration Number">
-                    </div>
-                    <div class="form-group">
-                        <label for="name">Name</label>
-                        <input type="text" class="form-control" id="name1" placeholder="Enter Your Name">
-                    </div>
-                </form>
-                <button class="btn btn-info" onclick="addElement1()">Add Element</button>
+
+                    <table id="myTable" class="table">
+                        <tr>
+                            <th> Course Name </th>
+                            <th> Course ID </th>
+                            <th> Credit Hours </th>
+                            <th> Course Instructor </th>
+                        </tr>
+
+                        <tr class="unit-table">
+                            <td>
+                                <input type="text">
+                            </td>
+                            <td>
+                                <input type="text">
+                            </td>
+                            <td>
+                                <input type="text">
+                            </td>
+                            <td>
+                                <input type="text">
+                            </td>
+                        </tr>
+                        <tr class="unit-table">
+                            <td>
+                                <input type="text">
+                            </td>
+                            <td>
+                                <input type="text">
+                            </td>
+                            <td>
+                                <input type="text">
+                            </td>
+                            <td>
+                                <input type="text">
+                            </td>
+                        </tr>
+                        <tr class="unit-table">
+                            <td>
+                                <input type="text">
+                            </td>
+                            <td>
+                                <input type="text">
+                            </td>
+                            <td>
+                                <input type="text">
+                            </td>
+                            <td>
+                                <input type="text">
+                            </td>
+                        </tr>
+                    </table>
+                    <button id="add_btn" class="btn btn-info">Add new row</button>
+                    <input type="submit" name="submit" value="Submit" class="btn btn-success">
+                </div>
             </div>
-            <div class="col-md-3">
+            <div class="col-md-1">
             </div>
         </div>
     </div>
 
     <script>
+        function addRow() {
+            var parentTable = document.getElementById('myTable');
+            var myTd, myInput;
+            var myTr = document.createElement('tr');
+            myTr.setAttribute('class', 'unit-table');
+            for (var i = 0; i < 4; i++) {
+                myTd = document.createElement('td');
+                myInput = document.createElement('input');
+                myInput.setAttribute('type', 'text');
+                myTd.appendChild(myInput);
+                myTr.appendChild(myTd);
+            }
+            parentTable.appendChild(myTr);
+        }
+        document.getElementById('add_btn').onclick = addRow;
+
         function addElement1() {
             var parent = document.getElementById("list2");
             var node = document.createElement("li");
