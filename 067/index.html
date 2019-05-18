@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <style>
+        .container-fluid {
+            padding: 5%;
+        }
+
+        .odd {
+            background-color: blue;
+        }
+
+        .even {
+            background-color: yellow;
+        }
+    </style>
+    <title>Lab 13</title>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-2"></div>
+            <div class="col-md-8">
+                <hr>
+                <h3>Task 1</h3>
+                <p id="text" onmouseover="mouseOverS()" onmouseout="mouseOutS()">This is Paragraph 1.This is Paragraph
+                    1.This is
+                    Paragraph 1.This is Paragraph 1.
+                    This is Paragraph 1.This is Paragraph 1.This is Paragraph 1.</p>
+                <button class="btn btn-primary" id="large" onclick="setLarge()">Large</button>
+                <button class="btn btn-primary" id="small" onclick="setSmall()">Small</button>
+                <script>
+                    function mouseOverS() {
+                        document.getElementsByTagName("p")[0].setAttribute("class", "font-italic");
+                    }
+
+                    function mouseOutS() {
+                        document.getElementsByTagName("p")[0].setAttribute("class", "normal");
+                    }
+
+                    function setSmall() {
+                        document.getElementById("text").style.fontSize = "x-small";
+                    }
+
+                    function setLarge() {
+                        document.getElementById("text").style.fontSize = "x-large";
+                    }
+                </script>
+
+                <hr>
+                <h3>Task 2</h3>
+                <ul id="list">
+
+                </ul>
+                <button class="btn btn-info" onclick="AddElement()">Add Element</button>
+                <button class="btn btn-danger" onclick="RemoveElement()">Remove Element</button>
+
+                <script>
+                    function AddElement() {
+                        var temp = document.createElement("li");
+                        temp.innerHTML = "This is new Element!";
+                        var length = document.getElementById("list").childNodes.length;
+                        if (length % 2 == 0) {
+                            temp.setAttribute("class", "even font-italic")
+                        } else {
+                            temp.setAttribute("class", "odd font-italic")
+                        }
+
+                        document.getElementById("list").appendChild(temp);
+                    }
+
+                    function RemoveElement() {
+                        var temp = document.getElementById("list");
+                        temp.removeChild(temp.lastChild);
+                    }
+                </script>
+                <hr>
+                <h3>Task 3</h3>
+                <p> This has been achieved by the odd/even colours of the list. <br> Odd is blue, Even is yellow </p>
+                <ul id="list1">
+
+                </ul>
+                <button class="btn btn-info" onclick="AddElement1()">Add Element</button>
+                <button class="btn btn-danger" onclick="RemoveElement1()">Remove Element</button>
+                <script>
+                    function AddElement1() {
+                        var temp = document.createElement("li");
+                        temp.innerHTML = "This is new Element!";
+                        var length = document.getElementById("list1").childNodes.length;
+                        if (length % 2 == 0) {
+                            temp.setAttribute("class", "even font-italic")
+                        } else {
+                            temp.setAttribute("class", "odd font-weight-bold")
+                        }
+
+                        document.getElementById("list1").appendChild(temp);
+                    }
+
+                    function RemoveElement1() {
+                        var temp = document.getElementById("list");
+                        temp.removeChild(temp.lastChild);
+                    }
+                </script>
+                <hr>
+                <h3>Task 4</h3>
+                <br>
+                <div class="panel panel-default">
+                    <div class="panel-body">
+                        <label>Your Name</label><br>
+                        <input type="text" name="name"><br>
+                        <label>Registration Number</label><br>
+                        <input type="text" name="regNo"><br>
+                        <label>Semester</label><br>
+                        <input type="text" name="semester"><br>
+                    </div>
+
+                    <table id="myTable" class="table">
+                        <tr>
+                            <th> Course Name </th>
+                            <th> Course ID </th>
+                            <th> Credit Hours </th>
+                            <th> Course Instructor </th>
+                        </tr>
+
+                        <tr class="unit-table">
+                            <td>
+                                <input type="text">
+                            </td>
+                            <td>
+                                <input type="text">
+                            </td>
+                            <td>
+                                <input type="text">
+                            </td>
+                            <td>
+                                <input type="text">
+                            </td>
+                        </tr>
+                        <tr class="unit-table">
+                            <td>
+                                <input type="text">
+                            </td>
+                            <td>
+                                <input type="text">
+                            </td>
+                            <td>
+                                <input type="text">
+                            </td>
+                            <td>
+                                <input type="text">
+                            </td>
+                        </tr>
+                        <tr class="unit-table">
+                            <td>
+                                <input type="text">
+                            </td>
+                            <td>
+                                <input type="text">
+                            </td>
+                            <td>
+                                <input type="text">
+                            </td>
+                            <td>
+                                <input type="text">
+                            </td>
+                        </tr>
+                    </table>
+                    <button id="add_btn" class="btn btn-info">Add new row</button>
+                    <input type="submit" name="submit" value="Submit" class="btn btn-success">
+                </div>
+
+                <script>
+                    function addRow() {
+                        var parentTable = document.getElementById('myTable');
+                        var myTd, myInput;
+                        var myTr = document.createElement('tr');
+                        myTr.setAttribute('class', 'unit-table');
+                        for (var i = 0; i < 4; i++) {
+                            myTd = document.createElement('td');
+                            myInput = document.createElement('input');
+                            myInput.setAttribute('type', 'text');
+                            myTd.appendChild(myInput);
+                            myTr.appendChild(myTd);
+                        }
+                        parentTable.appendChild(myTr);
+                    }
+                    document.getElementById('add_btn').onclick = addRow;
+                </script>
+            </div>
+
+            <div class="col-md-2"></div>
+
+        </div>
+    </div>
+
+</body>
+
+</html>
