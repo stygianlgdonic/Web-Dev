@@ -43,8 +43,8 @@ if (mysqli_num_rows($result) > 0) :
                 </td>
                 <td>
                     <?php
-                    if (isset($_SESSION["$row[real]"])) {
-                        echo $_SESSION["$row[real]"];
+                    if (isset($_SESSION['$row["real"]'])) {
+                        echo $_SESSION['$row["real"]'];
                     } else {
                         echo "None";
                     }

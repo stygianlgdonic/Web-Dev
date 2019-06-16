@@ -42,8 +42,8 @@ $row = mysqli_fetch_assoc($result);
         <div class="col-md-8">
             <?php
             session_start();
-            if (isset($_SESSION["$row[real]"])) {
-                $yourName = $_SESSION["$row[real]"];
+            if (isset($_SESSION['$row["real"]'])) {
+                $yourName = $_SESSION['$row["real"]'];
             } else {
                 $yourName = "null";
             }
@@ -61,7 +61,7 @@ $row = mysqli_fetch_assoc($result);
             </form>
             <?php
             if ($_SERVER["REQUEST_METHOD"] == "POST") {
-                $_SESSION["$row[real]"] = $_POST["name"];
+                $_SESSION['$row["real"]'] = $_POST["name"];
             }
             ?>
         </div>

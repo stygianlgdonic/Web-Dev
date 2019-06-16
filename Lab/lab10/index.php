@@ -70,8 +70,8 @@ session_start();
                                 </td>
                                 <td>
                                     <?php
-                                    if (isset($_SESSION["$row[real]"])) {
-                                        echo $_SESSION["$row[real]"];
+                                    if (isset($_SESSION['$row["real"]'])) {
+                                        echo $_SESSION['$row["real"]'];
                                     } else {
                                         echo "None";
                                     }
@@ -145,8 +145,8 @@ session_start();
                                 </td>
                                 <td>
                                     <?php
-                                    if (isset($_SESSION["$row[real]"])) {
-                                        echo $_SESSION["$row[real]"];
+                                    if (isset($_SESSION['$row["real"]'])) {
+                                        echo $_SESSION['$row["real"]'];
                                     } else {
                                         echo "None";
                                     }
